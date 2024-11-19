@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head><font size="5">Employee Management System</font></head>
+<title>Employee Management System</title>
+
+<header></header>
+
+
+<body>        
+    <hr>
+    
+    <nav class="nav-bar">
+        <table cellspacing="3" cellpadding="3">
+            <tr >
+                <td><a href="login.html">Login</a></td>
+                <td><a href="register.html">register</a></td>
+                <td><a href="finance.html">finance</a></td>
+                <td><a href="procurement.html">procurement</a></td>
+                <td><a href="leave.html">leave</a></td>
+            </tr>
+        </table>
+    </nav>
+    <style>
+        body{background-image: url(g.jpg);background-repeat: :3;background-position:centre;background-attachment:fixed}
+    </style>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Employee Salary Management</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f4f4f4;
+            }
+            h1 {
+                text-align: center;
+            }
+            form {
+                margin-bottom: 20px;
+                padding: 20px;
+                background: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            input[type="text"], input[type="number"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            button {
+                padding: 10px 15px;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #218838;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th, td {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <h1>Employee Salary Management</h1>
+    
+        <form id="salaryForm">
+            <input type="text" id="employeeName" placeholder="Employee Name" required>
+            <input type="number" id="employeeSalary" placeholder="Salary" required>
+            <button type="submit">Add Employee</button>
+        </form>
+    
+        <table id="salaryTable">
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    
+        <script>
+            document.getElementById('salaryForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                const name = document.getElementById('employeeName').value;
+                const salary = document.getElementById('employeeSalary').value;
+    
+                const table = document.getElementById('salaryTable').getElementsByTagName('tbody')[0];
+                const newRow = table.insertRow();
+    
+                const nameCell = newRow.insertCell(0);
+                const salaryCell = newRow.insertCell(1);
+    
+                nameCell.textContent = name;
+                salaryCell.textContent = salary;
+    
+                
+                document.getElementById('employeeName').value = '';
+                document.getElementById('employeeSalary').value = '';
+            });
+        </script>
+    
+    </body>
+    </html>
+<center>   <a href="login.html">leave</a></center>
+<style>
+    body{background-image: url(B.jpeg);background-repeat: :3;background-position:centre;background-attachment:fixed}
+</style>    
